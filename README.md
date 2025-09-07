@@ -1,74 +1,51 @@
 # 🚢 Maersk AI Analytics Platform
 
-## Advanced Business Intelligence & Predictive Analytics System for Supply Chain Optimization
+### Advanced Business Intelligence & Predictive Analytics System for Supply Chain Optimization
 
 A comprehensive enterprise-grade analytics platform designed for Maersk's logistics operations, featuring real-time shipment tracking, AI-powered delay predictions, and advanced business intelligence capabilities.
+
+---
 
 ## 🌟 Key Features
 
 ### Core Capabilities
-- **Real-time Shipment Tracking**: Monitor shipments with location tracking, status updates, and delay detection
+- **Real-time Shipment Tracking**: Monitor shipments with location tracking, status updates, and delay detection.
 - **4-Tier Analytics Engine**: 
-  - Descriptive Analytics: KPI monitoring and performance metrics
-  - Diagnostic Analytics: Root cause analysis for delays and bottlenecks
-  - Predictive Analytics: 7-day forecasting with risk assessment
-  - Prescriptive Analytics: Optimization recommendations and resource allocation
-- **Interactive Dashboard**: Executive summaries, KPI gauges, trend visualizations, and comprehensive reporting
-- **RESTful API**: 20+ endpoints for data management, analytics, and reporting
+  - **Descriptive Analytics**: KPI monitoring and performance metrics.
+  - **Diagnostic Analytics**: Root cause analysis for delays and bottlenecks.
+  - **Predictive Analytics**: 7-day forecasting with risk assessment.
+  - **Prescriptive Analytics**: Optimization recommendations and resource allocation.
+- **Interactive Dashboard**: Executive summaries, KPI gauges, trend visualizations, and comprehensive reporting.
+- **RESTful API**: 20+ endpoints for data management, analytics, and reporting.
 
 ### Technical Highlights
-- **Scalable Architecture**: Microservices design with modular components
-- **Advanced Visualizations**: Interactive Plotly charts with real-time updates
-- **Intelligent Insights**: Automated insight generation with actionable recommendations
-- **Performance Optimized**: Database indexing, async processing, and efficient data pipelines
+- **Scalable Architecture**: Microservices design with modular components.
+- **Advanced Visualizations**: Interactive Plotly charts with real-time updates.
+- **Intelligent Insights**: Automated insight generation with actionable recommendations.
+- **Performance Optimized**: Database indexing, async processing, and efficient data pipelines.
 
-## 📊 Analytics Modules
-
-### 1. Executive Dashboard
-- Key Performance Indicators (KPIs)
-- Delay rate monitoring (currently 30%)
-- On-time delivery tracking (70% rate)
-- High-risk shipment identification
-- Strategic recommendations
-
-### 2. Diagnostic Analysis
-- Root cause analysis for delays
-- Asset performance evaluation
-- Temporal pattern detection
-- Geographic hotspot analysis
-- Top delay reasons: Traffic (66.67%), Weather, Mechanical Issues
-
-### 3. Predictive Insights
-- 7-day shipment volume forecasting
-- Delay probability predictions
-- Risk factor assessment
-- Capacity utilization analysis
-- Bottleneck identification
-
-### 4. Prescriptive Recommendations
-- Resource optimization strategies
-- KPI improvement plans
-- Asset utilization balancing
-- Operational efficiency enhancements
+---
 
 ## 🛠️ Tech Stack
 
 ### Backend
-- **Framework**: FastAPI (Python 3.11+)
+- **Framework**: FastAPI
 - **Database**: SQLAlchemy ORM with SQLite/PostgreSQL
 - **Analytics**: Pandas, NumPy, Scikit-learn
 - **API Design**: RESTful architecture with Pydantic validation
 
 ### Frontend
 - **Dashboard**: Streamlit
-- **Visualizations**: Plotly (interactive charts)
+- **Visualizations**: Plotly
 - **UI Components**: Custom CSS, responsive design
 
 ### Infrastructure
-- **Caching**: Redis (optional)
-- **Task Queue**: Celery (optional)
+- **Caching**: Redis
+- **Task Queue**: Celery
 - **Monitoring**: Structured logging
 - **Deployment**: Docker-ready
+
+---
 
 ## 🚀 Quick Start
 
@@ -106,11 +83,6 @@ A comprehensive enterprise-grade analytics platform designed for Maersk's logist
    # Edit .env with your settings
    ```
 
-5. **Initialize database**
-   ```bash
-   # Database tables are auto-created on first run
-   ```
-
 ### Running the Application
 
 1. **Start the API server**
@@ -127,9 +99,7 @@ A comprehensive enterprise-grade analytics platform designed for Maersk's logist
    ```
    Dashboard will open at: http://localhost:8501
 
-3. **Load Sample Data** (optional)
-   - Use the "Load Sample Data" button in the dashboard sidebar
-   - Or via API: POST to `/data/load`
+---
 
 ## 📁 Project Structure
 
@@ -154,12 +124,13 @@ maersk_shipment_ai_system/
 │   ├── shipment_service.py    # Shipment logic
 │   └── data_service.py        # Data management
 ├── data/                # Data files
-├── config/              # Configuration
-│   └── settings.py      # App settings
+├── ml/                  # Machine Learning models and services
+├── tests/               # Automated tests
 ├── requirements.txt     # Python dependencies
-├── .env.example        # Environment template
-└── README.md           # Documentation
+└── README.md           # This file
 ```
+
+---
 
 ## 📈 API Endpoints
 
@@ -190,21 +161,7 @@ maersk_shipment_ai_system/
 - `GET /data/summary` - Dataset summary
 - `POST /data/load-real` - Load CSV data
 
-## 🔧 Configuration
-
-### Environment Variables (.env)
-```env
-# API Configuration
-API_HOST=localhost
-API_PORT=8080
-
-# Database
-DATABASE_URL=sqlite:///./maersk_shipments.db
-
-# Analytics
-MODEL_PREDICTION_BATCH_SIZE=100
-DASHBOARD_AUTO_REFRESH_SECONDS=30
-```
+---
 
 ## 🤖 Model Card - Delay Prediction Model
 
@@ -292,43 +249,23 @@ The model uses **29 engineered features** from legitimate operational data:
 5. **Calibration**: Apply Platt scaling or isotonic regression
 6. **Monitoring**: Implement drift detection and performance tracking
 
-## 📊 Sample Analytics Results
-
-### Current Performance Metrics
-- **Total Shipments**: 1,000 records loaded
-- **Model Accuracy**: 73% (on test set)
-- **Processing Speed**: <100ms per prediction
-- **API Response Time**: <200ms average
-
-### Generated Insights
-1. Geographic location significantly impacts delay probability
-2. Fuel efficiency correlates with on-time performance
-3. Asset historical performance predicts future delays
-4. Time-of-day patterns affect logistics operations
+---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new feature branch (`git checkout -b feature/your-feature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+---
 
 ## 📝 License
 
 This project is proprietary software developed for Maersk logistics operations.
-
-## 👥 Team
-
-- **Lead Developer**: [Your Name]
-- **Role**: Full-Stack Developer & Data Engineer
-- **Technologies**: Python, FastAPI, Pandas, Plotly, Streamlit
-
-## 🔗 Links
-
-- [API Documentation](http://localhost:8080/docs)
-- [Dashboard](http://localhost:8501)
-- [Project Repository](https://github.com/yourusername/maersk_shipment_ai_system)
 
 ---
 
