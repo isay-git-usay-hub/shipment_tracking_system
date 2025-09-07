@@ -224,33 +224,6 @@ The model uses **29 engineered features** from legitimate operational data:
 - **Metrics**: ROC AUC (primary), Accuracy, Precision, Recall, F1
 - **Test Set**: Hold-out 20% for final evaluation
 
-### Limitations & Considerations
-
-#### Current Limitations
-1. **Synthetic Data**: Current model trained on generated delay patterns
-2. **Low Predictive Power**: ROC AUC ~0.5 indicates random performance
-3. **Class Imbalance**: Model struggles with minority class (delays)
-4. **Feature Engineering**: Requires real-world validation
-
-#### Production Readiness Checklist
-- ✅ Target leakage removed
-- ✅ Cross-validation implemented
-- ✅ Feature importance tracked
-- ✅ Model versioning in place
-- ⚠️ Needs real data for meaningful predictions
-- ⚠️ Requires hyperparameter tuning
-- ⚠️ Should implement model calibration
-
-### Recommended Improvements
-1. **Data Quality**: Train on real historical shipment data
-2. **Feature Engineering**: Add route-specific features, seasonal patterns
-3. **Model Selection**: Try XGBoost or ensemble methods
-4. **Hyperparameter Tuning**: Use GridSearchCV or Bayesian optimization
-5. **Calibration**: Apply Platt scaling or isotonic regression
-6. **Monitoring**: Implement drift detection and performance tracking
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
